@@ -2,7 +2,7 @@
 
 '''State module'''
 
-from models.baseModel import baseModel
+from models.baseModel import BaseModel
 
 class State(BaseModel):
 	'''State class'''

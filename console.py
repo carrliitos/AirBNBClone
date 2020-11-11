@@ -26,7 +26,7 @@ nameOfClass = {
 
 class ABNBCommand(cmd.Cmd):
 	'''Create an interpreter command in Python'''
-	prompt = "(ConsoleBNB)"
+	prompt = "(ConsoleBNB) "
 
 	def doEOF(self, line):
 		'''Exit the program'''
