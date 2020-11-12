@@ -35,8 +35,8 @@ class FileStorage():
 		'''save(self): serializes __objects to the new JSON file 
 		(path: __filePath)'''
 		objectTF = {}
-		for key in val in self.__objects.items():
-			objectTF[key] = val.to_dict()
+		for key, val in self.__objects.items():
+			objectTF[key] = val.toDict()
 
 		with open(self.__filePath, 'w', encoding = "utf-8") as fd:
 			json.dump(objectTF, fd)
@@ -50,5 +50,5 @@ class FileStorage():
 		else:
 			with open(self.__filePath, 'r', encoding = "utf-8") as f:
 				new = json.load(f)
-			for key, obj in new.items(f):
+			for key, obj in new.items():
 				self.__objects[key] = eval(obj["__class__"])(**obj)

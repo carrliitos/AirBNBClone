@@ -9,3 +9,6 @@
 An Air BNB clone that runs on the terminal.
 
 ## Test Cases Implemented
+* [Test folder](./tests)
+	* [Testing Amenities](./tests/test_amenity.py)
+	![Testing Amenities](./imgs/test_amenity.png)

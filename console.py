@@ -33,7 +33,7 @@ class ABNBCommand(cmd.Cmd):
 		return True
 
 	def doQuit(self, line):
-		'''Quit command exit the program\n'''
+		'''Quit command exit the program'''
 		return True
 
 	def emptyLine(self, args):
