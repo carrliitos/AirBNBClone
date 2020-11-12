@@ -12,3 +12,5 @@ A test-driven development Air BNB clone that runs on the terminal.
 * [Test folder](./tests)
 	* [Testing Amenities](./tests/testModels/test_amenity.py)
 	![Testing Amenities](./imgs/test_amentiy.png)
+	* [Testing Base model](./tests/testModels/test_baseModel.py)
+	![Testing Base model](./imgs/test_baseModel.png)
