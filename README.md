@@ -4,13 +4,38 @@
 ## Contents
 * [About](https://github.com/carrliitos/AirBNBClone#about)
 * [Test Cases implemented](https://github.com/carrliitos/AirBNBClone#test-cases-implemented)
+* [Example Usage](https://github.com/carrliitos/AirBNBClone#example-usage)
 
 ## About
 A test-driven development Air BNB clone that runs on the terminal.
 
-## Test Cases Implemented
+## All test cases
 * [Test folder](./tests)
-	* [Testing Amenities](./tests/testModels/test_amenity.py)
-	![Testing Amenities](./imgs/test_amentiy.png)
-	* [Testing Base model](./tests/testModels/test_baseModel.py)
-	![Testing Base model](./imgs/test_baseModel.png)
+
+![All test cases](./imgs/test_cases.png)
+
+## Example usage
+*On **non-interactive** mode*
+
+```
+$ echo "help" | ./console.py
+(ConsoleBNB)
+Documented commands (type help <topic>):
+========================================
+EOF  all  create  destroy  help  quit  show  update
+
+```
+
+*On **interactive** mode*
+
+```
+$ ./console.py
+(ConsoleBNB) help
+
+Documented commands (type help <topic>):
+========================================
+EOF  all  create  destroy  help  quit  show  update
+
+(ConsoleBNB) quit
+
+```

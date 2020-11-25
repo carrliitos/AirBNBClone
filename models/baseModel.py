@@ -16,7 +16,7 @@ class BaseModel():
 		updatedAt:
 			datetime - assign with the current datetime when an instance is 
 			created and it will be updated every time you change your object'''
-		if len(kwargs) == 0:
+		if len(kwargs) is 0:
 			self.id = str(uuid4())
 			self.createdAt = datetime.now()
 			self.updatedAt = datetime.now()
@@ -34,8 +34,8 @@ class BaseModel():
 
 	def __str__(self):
 		'''Returns a string'''
-		return ("[{}] ({}) {}".format(self.__class__.__name__, self.id,
-										self.__dict__))
+		return ("[{}] ({}) {}".format(self.__class__.__name__, 
+									self.id, self.__dict__))
 
 	def save(self):
 		'''Save a file'''
