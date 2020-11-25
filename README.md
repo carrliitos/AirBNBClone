@@ -4,6 +4,7 @@
 ## Contents
 * [About](https://github.com/carrliitos/AirBNBClone#about)
 * [Test Cases implemented](https://github.com/carrliitos/AirBNBClone#test-cases-implemented)
+* [Example Usage](https://github.com/carrliitos/AirBNBClone#example-usage)
 
 ## About
 A test-driven development Air BNB clone that runs on the terminal.
