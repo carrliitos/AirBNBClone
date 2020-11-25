@@ -3,7 +3,7 @@
 """City Module."""
 from models.baseModel import BaseModel
 
-class City(object):
+class City(BaseModel):
 	"""BaseModel: state ID, name."""
 	stateID = ""
 	name = ""
