@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
-"""Test City"""
-from models.city import City
+"""Test User"""
+from models.user import User
 from models import storage
 import unittest
 import datetime
@@ -9,17 +9,17 @@ import time
 import os
 import json
 
-class Test_City(unittest.TestCase):
-	'''Test_City class'''
+class Test_User(unittest.TestCase):
+	'''Test_User class'''
 	def test_doc(self):
 		'''Tests docstring'''
 		self.assertIsNotNone(("models.baseModel".__doc__))
-		self.assertIsNotNone(City.__doc__)
-		self.assertIsNotNone(City.__init__.__doc__)
+		self.assertIsNotNone(User.__doc__)
+		self.assertIsNotNone(User.__init__.__doc__)
 
 	def test_attr(self):
 		'''Tests attributes'''
-		base = City()
+		base = User()
 		base.name = "Salazar"
 		base.number = 52000
 
@@ -31,12 +31,12 @@ class Test_City(unittest.TestCase):
 
 	def test_type(self):
 		'''Test type class'''
-		base = City()
-		self.assertAlmostEqual(type(base), City)
+		base = User()
+		self.assertAlmostEqual(type(base), User)
 
 	def test_updatedAt(self):
 		'''Test updated at'''
-		base = City()
+		base = User()
 		create = str(base.createdAt)
 		start = str(base.updatedAt)
 		base.name = "Salazar"
@@ -47,16 +47,16 @@ class Test_City(unittest.TestCase):
 
 	def test_to_dict(self):
 		'''Tests dict'''
-		base = City()
+		base = User()
 		base2 = base.toDict()
 
 		self.assertEqual(base2["updatedAt"], base.updatedAt.isoformat())
-		self.assertEqual(base2["__class__"], "City")
+		self.assertEqual(base2["__class__"], "User")
 		self.assertNotIn("__class__", base.__dict__)
 
 	def test_save(self):
 		'''Tests save'''
-		base = City()
+		base = User()
 		base.save()
 		with open("fileStorage.json", mode="r", encoding="UTF-8") as f:
 			d = json.load(f)
@@ -68,29 +68,29 @@ class Test_City(unittest.TestCase):
 
 	def test_new_model_dict(self):
 		'''Tests new model with dictionary'''
-		base = City()
+		base = User()
 		dict1 = base.toDict()
-		base2 = City(**dict1)
+		base2 = User(**dict1)
 
 		self.assertFalse(base is base2)
 		self.assertDictEqual(base.toDict(), base2.toDict())
 
 	def test_instance(self):
 		'''Tests instance'''
-		instanceTest = City()
+		instanceTest = User()
 
-		self.assertIsInstance(instanceTest, City)
+		self.assertIsInstance(instanceTest, User)
 
 	def test_permissions(self):
 		'''Tests permissions'''
-		self.assertFalse(os.access("models/City.py", os.X_OK))
-		self.assertFalse(os.access("models/City.py", os.R_OK))
-		self.assertFalse(os.access("models/City.py", os.W_OK))
-		self.assertFalse(os.access("models/City.py", os.F_OK))
+		self.assertFalse(os.access("models/User.py", os.X_OK))
+		self.assertFalse(os.access("models/User.py", os.R_OK))
+		self.assertFalse(os.access("models/User.py", os.W_OK))
+		self.assertFalse(os.access("models/User.py", os.F_OK))
 
 	def test_ids_maker(self):
 		'''Tests to generate the ID'''
-		option1 = City()
-		option2 = City()
+		option1 = User()
+		option2 = User()
 
 		self.assertNotEqual(option1, option2)
