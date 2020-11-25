@@ -28,11 +28,11 @@ class ABNBCommand(cmd.Cmd):
 	'''Create an interpreter command in Python'''
 	prompt = "(ConsoleBNB) "
 
-	def doEOF(self, line):
+	def do_EOF(self, line):
 		'''Exit the program'''
 		return True
 
-	def doQuit(self, line):
+	def do_quit(self, line):
 		'''Quit command exit the program'''
 		return True
 
@@ -40,7 +40,7 @@ class ABNBCommand(cmd.Cmd):
 		'''Nothing is executed'''
 		pass
 
-	def doCreate(self, args):
+	def do_create(self, args):
 		'''Create a new instance of the class BaseModel'''
 		args = shlex.split(args)
 		if not args:
@@ -52,7 +52,7 @@ class ABNBCommand(cmd.Cmd):
 			newObj.save()
 			print(newObj.id)
 
-	def doShow(self, args):
+	def do_show(self, args):
 		'''Prints the string representation of the instance'''
 		args = shlex.split(args)
 		dicti = storage.all()
@@ -67,7 +67,7 @@ class ABNBCommand(cmd.Cmd):
 		else:
 			print("** no instance found **")
 
-	def doDestroy(self, args):
+	def do_destroy(self, args):
 		'''Deletes an instance base on the class name and id'''
 		args = shlex.split(args)
 		dicti = storage.all()
@@ -83,7 +83,7 @@ class ABNBCommand(cmd.Cmd):
 		else:
 			print("** no instance found **")
 
-	def doAll(self, args):
+	def do_all(self, args):
 		'''Prints all strings representation of all instances'''
 		args = shlex.split(args)
 		dicti = storage.all()
@@ -100,7 +100,7 @@ class ABNBCommand(cmd.Cmd):
 		else:
 			print("** class doesn't exist **")
 
-	def doUpdate(self, args):
+	def do_update(self, args):
 		'''Updates an instance base on the class name and id'''
 		args = shlex.split(args)
 		dicti = storage.all()
