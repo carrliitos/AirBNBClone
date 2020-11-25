@@ -10,6 +10,7 @@ A test-driven development Air BNB clone that runs on the terminal.
 
 ## All test cases
 * [Test folder](./tests)
+
 ![All test cases](./imgs/test_cases.png)
 
 ## Example usage
